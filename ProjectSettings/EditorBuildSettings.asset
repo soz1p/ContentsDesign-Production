@@ -14,16 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IslandPlay.unity
     guid: 287e1befdc038254ea86dbc850eb2ab2
-  - enabled: 0
-    path: Assets/Scenes/Island.unity
-    guid: d8addcd1358be4b42a2899d26cbbcb80
-  - enabled: 1
-    path: Assets/Scenes/MountainLobby.unity
-    guid: 797d521c7f5a49f4bb732e32c3150ba6
   - enabled: 1
     path: Assets/Scenes/MountainPlay.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    guid: 3540a15341616ac4bb234cf26364830d
   - enabled: 1
     path: Assets/Scenes/tryagain.unity
     guid: 948550376a7ae5d4e87fed1009343b0d
+  - enabled: 1
+    path: Assets/Scenes/MountainLobby.unity
+    guid: 39e8df1258603b647a85956bbf229864
   m_configObjects: {}
