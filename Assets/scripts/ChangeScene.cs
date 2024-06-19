@@ -16,5 +16,10 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("MountainLobby");
     }
+
+    public void LoadMainLobby()
+    {
+        SceneManager.LoadScene("MainLobby");
+    }
 }
 
