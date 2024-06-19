@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; // SceneManager를 사용하기 위해 추가
 
 public class HealthBar : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class HealthBar : MonoBehaviour
         {
             currentHealth -= decreaseRate * Time.deltaTime;
             UpdateHealthBar();
+        }
+        else
+        {
+            SceneManager.LoadScene("tryagain"); // 체력이 0 이하가 되면 "tryagain" 씬으로 이동
         }
     }
 
