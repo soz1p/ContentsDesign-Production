@@ -93,6 +93,9 @@ MonoBehaviour:
   m_moveSpeed: 2
   m_runSpeed: 4
   m_jumpForce: 5
+  statueBearPrefab: {fileID: 0}
+  spawnRadius: 20
+  detectionRadius: 10
 --- !u!143 &4692252496006815540
 CharacterController:
   m_ObjectHideFlags: 0
