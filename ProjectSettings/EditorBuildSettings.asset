@@ -5,27 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainLobby.unity
     guid: e9db45dd5e023304db3cb667d7caa8de
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IslandLobby.unity
     guid: 453f4ae4636a24f469a025c6e8c0cc46
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IslandMultiPlay.unity
     guid: cb4650399b70f4e4084831e37b7cf585
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IslandPlay.unity
     guid: 287e1befdc038254ea86dbc850eb2ab2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MountainLobby.unity
     guid: 39e8df1258603b647a85956bbf229864
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MountainPlay.unity
     guid: 3540a15341616ac4bb234cf26364830d
   - enabled: 1
     path: Assets/Scenes/MountainMultiPlay.unity
-    guid: b948a138e352a964385290b4f971b8c9
+    guid: cfdb4c170a513cc41a9091a94dc2c75d
   - enabled: 1
     path: Assets/Scenes/tryagain.unity
     guid: 948550376a7ae5d4e87fed1009343b0d
