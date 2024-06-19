@@ -1,6 +1,6 @@
 using UnityEngine;
 using Photon.Pun;
-using System.Collections; // IEnumerator를 사용하기 위해 추가
+using System.Collections;
 
 public class DungeonCamera : MonoBehaviourPunCallbacks
 {
@@ -46,6 +46,7 @@ public class DungeonCamera : MonoBehaviourPunCallbacks
         {
             Debug.Log("Finding local player...");
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            Debug.Log("Players found: " + players.Length);
             foreach (GameObject player in players)
             {
                 PhotonView photonView = player.GetComponent<PhotonView>();

@@ -26,7 +26,6 @@ public class mountainLauncher : MonoBehaviourPunCallbacks
     {
         Debug.Log("Joined a room.");
         PhotonNetwork.Instantiate(playerPrefab.name, spawnPosition, Quaternion.identity);
-        Debug.Log("Player instantiated at: " + spawnPosition);
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
@@ -53,4 +52,3 @@ public class mountainLauncher : MonoBehaviourPunCallbacks
         Debug.LogError("Failed to create room: " + message);
     }
 }
-
