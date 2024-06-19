@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: IslandFighter
       objectReference: {fileID: 0}
+    - target: {fileID: 100138, guid: 6ba7d9e7f21634f4aa12be5dce759c49, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 400138, guid: 6ba7d9e7f21634f4aa12be5dce759c49, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -93,7 +97,7 @@ MonoBehaviour:
   m_moveSpeed: 2
   m_runSpeed: 4
   m_jumpForce: 5
-  statueBearPrefab: {fileID: 0}
+  statueBearPrefab: {fileID: 162722, guid: 170fcf4e078c4fb4eb18e6664e4d909b, type: 3}
   spawnRadius: 20
   detectionRadius: 10
 --- !u!143 &4692252496006815540
