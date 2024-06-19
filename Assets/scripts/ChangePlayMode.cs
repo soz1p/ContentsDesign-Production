@@ -12,7 +12,7 @@ public class ChangePlayMode : MonoBehaviour
 
     public void LoadIslandMultiPlayScene()
     {
-       // SceneManager.LoadScene("MultiIslandPlay");
+       SceneManager.LoadScene("IslandMultiPlay");
     }
 
     public void LoadMountainPlayScene()
