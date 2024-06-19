@@ -18,12 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MountainPlay.unity
     guid: 3540a15341616ac4bb234cf26364830d
   - enabled: 1
+    path: Assets/Scenes/MountainMultiPlay.unity
+    guid: b948a138e352a964385290b4f971b8c9
+  - enabled: 0
     path: Assets/Scenes/MountainMulti.unity
     guid: 2cff0c350cbd24441a2bd02a44374be9
   - enabled: 1
     path: Assets/Scenes/tryagain.unity
     guid: 948550376a7ae5d4e87fed1009343b0d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MountainLobby.unity
     guid: 39e8df1258603b647a85956bbf229864
   m_configObjects: {}

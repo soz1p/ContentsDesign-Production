@@ -1,6 +1,6 @@
 using UnityEngine;
-
-public class cshPlayerController : MonoBehaviour
+using Photon.Pun;
+public class cshPlayerController : MonoBehaviourPunCallbacks
 {
     private Animator m_animator;
     private Vector3 m_velocity;
@@ -19,13 +19,16 @@ public class cshPlayerController : MonoBehaviour
 
     void Update()
     {
-        PlayerMove();
-        m_animator.SetBool("Jump", !m_isGrounded);
-
-        // Keyboard input for jumping
-        if (Input.GetKeyDown(KeyCode.Space) && m_isGrounded)
+        if (photonView.IsMine)
         {
-            m_jumpOn = true;
+            PlayerMove();
+            m_animator.SetBool("Jump", !m_isGrounded);
+
+            // Keyboard input for jumping
+            if (Input.GetKeyDown(KeyCode.Space) && m_isGrounded)
+            {
+                m_jumpOn = true;
+            }
         }
     }
 
@@ -34,6 +37,7 @@ public class cshPlayerController : MonoBehaviour
         CharacterController controller = GetComponent<CharacterController>();
         float gravity = 20.0f;
         float currentSpeed = m_moveSpeed;
+
 
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
