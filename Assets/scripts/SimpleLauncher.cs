@@ -9,7 +9,7 @@ public class SimpleLauncher : MonoBehaviourPunCallbacks
     public PhotonView playerPrefab;
 
     // 원하는 위치를 Vector3로 설정합니다.
-    private Vector3 spawnPosition = new Vector3(50f, 46.7f, 50f);
+    private Vector3 spawnPosition = new Vector3(0f, 6.7f, 0f);
 
     void Start()
     {

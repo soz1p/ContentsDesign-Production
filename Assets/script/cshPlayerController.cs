@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement; // SceneManager를 사용하기 위해 추가
 using Photon.Pun;
+
 public class cshPlayerController : MonoBehaviourPunCallbacks
 {
     private Animator m_animator;
@@ -18,44 +19,51 @@ public class cshPlayerController : MonoBehaviourPunCallbacks
     private float timer = 0f;
     private bool hasSpawnedStatueBear = false;
 
+    private cshAttackArea m_attackArea = null;
+
     void Start()
     {
         m_animator = GetComponent<Animator>();
         m_attackArea = GetComponentInChildren<cshAttackArea>();
+
+        if (!photonView.IsMine)
+        {
+            Destroy(GetComponent<Rigidbody>());
+            Destroy(GetComponent<Collider>());
+        }
     }
 
     void Update()
     {
+        if (!photonView.IsMine) return;
+
         timer += Time.deltaTime;
-        if (photonView.IsMine)
+
+        if (timer >= 5f && !hasSpawnedStatueBear)
         {
+            SpawnStatueBear();
+            hasSpawnedStatueBear = true;
+        }
 
-            if (timer >= 5f && !hasSpawnedStatueBear)
+        if (statueBearInstance != null)
+        {
+            float distance = Vector3.Distance(transform.position, statueBearInstance.transform.position);
+            Debug.Log("Distance to StatueBear: " + distance); // 거리 로그 출력
+
+            if (distance <= detectionRadius)
             {
-                SpawnStatueBear();
-                hasSpawnedStatueBear = true;
+                Debug.Log("Player is close to StatueBear. Loading 'tryagain' scene.");
+                SceneManager.LoadScene("tryagain");
             }
+        }
 
-            if (statueBearInstance != null)
-            {
-                float distance = Vector3.Distance(transform.position, statueBearInstance.transform.position);
-                Debug.Log("Distance to StatueBear: " + distance); // 거리 로그 출력
+        PlayerMove();
+        m_animator.SetBool("Jump", !m_isGrounded);
 
-                if (distance <= detectionRadius)
-                {
-                    Debug.Log("Player is close to StatueBear. Loading 'tryagain' scene.");
-                    SceneManager.LoadScene("tryagain");
-                }
-            }
-
-            PlayerMove();
-            m_animator.SetBool("Jump", !m_isGrounded);
-
-            // Keyboard input for jumping
-            if (Input.GetKeyDown(KeyCode.Space) && m_isGrounded)
-            {
-                m_jumpOn = true;
-            }
+        // Keyboard input for jumping
+        if (Input.GetKeyDown(KeyCode.Space) && m_isGrounded)
+        {
+            m_jumpOn = true;
         }
     }
 
@@ -115,8 +123,6 @@ public class cshPlayerController : MonoBehaviourPunCallbacks
             m_jumpOn = true;
         }
     }
-
-    private cshAttackArea m_attackArea = null;
 
     public bool CanAttack()
     {

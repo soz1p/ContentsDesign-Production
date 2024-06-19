@@ -1,14 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
 public class mountainLauncher : MonoBehaviourPunCallbacks
 {
-    public PhotonView playerPrefab;
-
-    // 원하는 위치를 Vector3로 설정합니다.
+    public GameObject playerPrefab;
     private Vector3 spawnPosition = new Vector3(50f, 46.7f, 50f);
 
     void Start()
@@ -24,8 +20,15 @@ public class mountainLauncher : MonoBehaviourPunCallbacks
 
     public override void OnJoinedRoom()
     {
-        Debug.Log("Joined a room.");
-        PhotonNetwork.Instantiate(playerPrefab.name, spawnPosition, Quaternion.identity);
+        if (playerPrefab != null)
+        {
+            Debug.Log("Joined a room.");
+            PhotonNetwork.Instantiate(playerPrefab.name, spawnPosition, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Player prefab is not assigned.");
+        }
     }
 
     public override void OnJoinRandomFailed(short returnCode, string message)
