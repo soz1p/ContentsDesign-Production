@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -43,6 +44,8 @@ public class cshSingleController : MonoBehaviour
             {
                 Debug.Log("Player is close to StatueBear. Loading 'tryagain' scene.");
                 SceneManager.LoadScene("tryagain");
+                Destroy(this.gameObject); // 네트워크 상의 모든 클라이언트에서 이 객체를 삭제
+
             }
         }
 

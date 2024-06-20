@@ -15,7 +15,7 @@ public class cshPlayerController : MonoBehaviourPunCallbacks
     public float m_jumpForce = 5.0f;
     public GameObject statueBearPrefab; // StatueBear 프리팹
     public float spawnRadius = 20.0f; // StatueBear 생성 반경
-    public float detectionRadius = 10.0f; // 플레이어와 StatueBear 간의 거리 감지 반경
+    public float detectionRadius = 3.0f; // 플레이어와 StatueBear 간의 거리 감지 반경
     private float timer = 0f;
     private bool hasSpawnedStatueBear = false;
 
@@ -52,8 +52,9 @@ public class cshPlayerController : MonoBehaviourPunCallbacks
 
             if (distance <= detectionRadius)
             {
-                Debug.Log("Player is close to StatueBear. Loading 'tryagain' scene.");
-                SceneManager.LoadScene("tryagain");
+                Debug.Log("Player is close to StatueBear. Destroying player and loading 'tryagain' scene.");
+                PhotonNetwork.Destroy(this.gameObject); // 네트워크 상의 모든 클라이언트에서 이 객체를 삭제
+                PhotonNetwork.LoadLevel("tryagain"); // 모든 클라이언트에서 씬을 전환
             }
         }
 
