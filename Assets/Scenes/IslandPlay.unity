@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.4
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.07211357, g: 0.09028548, b: 0.12276905, a: 0.4}
+  m_IndirectSpecularColor: {r: 0.072113775, g: 0.09028578, b: 0.12276947, a: 0.4}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -666,9 +666,9 @@ MonoBehaviour:
   m_moveSpeed: 2
   m_runSpeed: 4
   m_jumpForce: 5
-  statueBearPrefab: {fileID: 162722, guid: 170fcf4e078c4fb4eb18e6664e4d909b, type: 3}
+  statueBearPrefab: {fileID: 100140, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
   spawnRadius: 20
-  detectionRadius: 10
+  detectionRadius: 3
 --- !u!4 &447896041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446262, guid: bf5c716dea4419148879f65f4373d70d, type: 3}
