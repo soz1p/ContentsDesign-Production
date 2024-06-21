@@ -48,7 +48,7 @@ public class cshPlayerController : MonoBehaviourPunCallbacks
         if (statueBearInstance != null)
         {
             float distance = Vector3.Distance(transform.position, statueBearInstance.transform.position);
-            Debug.Log("Distance to StatueBear: " + distance); // 거리 로그 출력
+            //ebug.Log("Distance to Enemy: " + distance); // 거리 로그 출력
 
             if (distance <= detectionRadius)
             {

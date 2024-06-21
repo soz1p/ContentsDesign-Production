@@ -69,6 +69,9 @@ PrefabInstance:
       addedObject: {fileID: 2602799122022678571}
     - targetCorrespondingSourceObject: {fileID: 100138, guid: 6ba7d9e7f21634f4aa12be5dce759c49, type: 3}
       insertIndex: -1
+      addedObject: {fileID: -5717632344026969213}
+    - targetCorrespondingSourceObject: {fileID: 100138, guid: 6ba7d9e7f21634f4aa12be5dce759c49, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 4692252496006815540}
     - targetCorrespondingSourceObject: {fileID: 100138, guid: 6ba7d9e7f21634f4aa12be5dce759c49, type: 3}
       insertIndex: -1
@@ -76,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100138, guid: 6ba7d9e7f21634f4aa12be5dce759c49, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8755384626499296849}
+    - targetCorrespondingSourceObject: {fileID: 100138, guid: 6ba7d9e7f21634f4aa12be5dce759c49, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5662257937992051520}
   m_SourcePrefab: {fileID: 100100000, guid: 6ba7d9e7f21634f4aa12be5dce759c49, type: 3}
 --- !u!1 &3906894395411330999 stripped
 GameObject:
@@ -100,6 +106,23 @@ MonoBehaviour:
   statueBearPrefab: {fileID: 100140, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
   spawnRadius: 20
   detectionRadius: 3
+--- !u!114 &-5717632344026969213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3906894395411330999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf3f49ae8ebe052449270688137d3150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionComplete: 0
+  missionCompleteUI: {fileID: 3743328855686937270, guid: 5cb49b954535aee459fb26b9a2ccace7, type: 3}
+  survivalTextUI: {fileID: 2797509026264523224, guid: 383e3b79be8caff4990d69a0c05a48ff, type: 3}
+  lobbyButtonUI: {fileID: 227430005833753407, guid: 125f00c8aca06e549bba9ea57c39f77a, type: 3}
+  healthBarUI: {fileID: 1659352712759823570, guid: 4a4c2f02c2fd54f4b9c73953585e950d, type: 3}
 --- !u!143 &4692252496006815540
 CharacterController:
   m_ObjectHideFlags: 0
@@ -176,9 +199,33 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 3
   OwnershipTransfer: 0
-  observableSearch: 2
+  observableSearch: 0
   ObservedComponents:
   - {fileID: -9137660194956243095}
+  - {fileID: 0}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!136 &-5662257937992051520
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3906894395411330999}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.7, z: 0}

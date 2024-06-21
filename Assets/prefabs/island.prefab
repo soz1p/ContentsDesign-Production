@@ -96,7 +96,7 @@ MonoBehaviour:
   m_moveSpeed: 2
   m_runSpeed: 4
   m_jumpForce: 5
-  statueBearPrefab: {fileID: 7376746651141872002, guid: 7435514a57f58c14ea6bc971383ffaa0, type: 3}
+  statueBearPrefab: {fileID: 100140, guid: bc600cce01eb57a409f4e69025868a2c, type: 3}
   spawnRadius: 20
   detectionRadius: 10
 --- !u!143 &7319648116572917256

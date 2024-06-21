@@ -175,10 +175,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2074165584985062304}
-  - component: {fileID: 993735932354301298}
+  - component: {fileID: 7307923528102145374}
   - component: {fileID: 3816879539047999195}
   m_Layer: 0
-  m_Name: Compass
+  m_Name: multiCompass
   m_TagString: Compass
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +202,7 @@ Transform:
   - {fileID: 2898839642759889558}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &993735932354301298
+--- !u!114 &7307923528102145374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,11 +211,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8422258709623731372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45dcb9f9707642a4aaaedba7865b92d8, type: 3}
+  m_Script: {fileID: 11500000, guid: b870fc2f3d6620b47ab04131fc4426ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   escapeGatePrefab: {fileID: 4282184435333812407, guid: 519dd85a2162cef4e8ea1b5f7720c6c7, type: 3}
-  escapeGateSpawnOffset: {x: 0.93, y: 6.4, z: 4.41}
+  escapeGateSpawnOffset: {x: 0.93, y: 6.2, z: 5.1}
+  missionCompleteUIPrefab: {fileID: 2374120986765510385, guid: 5cb49b954535aee459fb26b9a2ccace7, type: 3}
 --- !u!65 &3816879539047999195
 BoxCollider:
   m_ObjectHideFlags: 0

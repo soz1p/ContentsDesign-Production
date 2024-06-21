@@ -7,17 +7,20 @@ public class EscapeGate : MonoBehaviour
     public TMP_Text survivalText;
     public GameObject lobbyButton;
     public Slider healthBar; // Ã¼·Â¹Ù Slider
+    public EscapeGate gateobject;
 
     void Start()
     {
         survivalText.gameObject.SetActive(false);
         lobbyButton.SetActive(false);
+        gateobject.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            gateobject.gameObject.SetActive(true);
             ActivateSurvivalUI();
             DisableHealthBar();
         }
